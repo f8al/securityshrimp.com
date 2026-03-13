@@ -23,9 +23,9 @@ High-risk domains are flagged and scored, making it easy for brand protection te
 
 ## Getting Started
 
-Highlander is open source and available on [GitHub](https://github.com/securityshrimp/highlander). It runs as a containerized application with Docker Compose, making deployment straightforward.
+Highlander is available as a managed service from SecurityShrimp. We handle the infrastructure, monitoring, and alerting so your team can focus on responding to threats.
 
-We also offer managed brand protection services for organizations that want continuous monitoring without managing the infrastructure. [Get in touch](/services.html#contact) to learn more.
+Interested in protecting your brand? [Get in touch](/services.html#contact) to learn more or [request a demo](/products.html).
 
 ---
 
