@@ -58,21 +58,20 @@ class MatrixRain {
   }
 }
 
-// Initialize matrix rain on hero canvas
-document.addEventListener('DOMContentLoaded', () => {
-  const canvas = document.getElementById('matrix-canvas');
-  if (!canvas) return;
+// Initialize effects
+function initEffects() {
+  // Initialize matrix rain on all canvases (hero + page-hero)
+  document.querySelectorAll('#matrix-canvas, .matrix-bg').forEach(canvas => {
+    const rain = new MatrixRain(canvas);
+    rain.start();
 
-  const rain = new MatrixRain(canvas);
-  rain.start();
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) rain.start();
+      else rain.stop();
+    }, { threshold: 0.1 });
 
-  // Pause when hero is not visible
-  const observer = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting) rain.start();
-    else rain.stop();
-  }, { threshold: 0.1 });
-
-  observer.observe(canvas.parentElement);
+    observer.observe(canvas.parentElement);
+  });
 
   // Auto-apply glitch effect to all h1s
   document.querySelectorAll('h1').forEach(el => {
@@ -80,4 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const text = el.textContent;
     el.innerHTML = `<span class="glitch" data-text="${text}">${text}</span>`;
   });
-});
+}
+
+// Run immediately
+initEffects();

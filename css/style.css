@@ -353,10 +353,12 @@ code, .mono { font-family: var(--font-mono); }
 
 /* --- Page Hero (inner pages) --- */
 .page-hero {
+  position: relative; overflow: hidden;
   padding: 120px 0 60px; text-align: center;
   border-bottom: 1px solid var(--border-color);
   background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-primary) 100%);
 }
+.page-hero .container { position: relative; z-index: 2; }
 .page-hero h1 { margin-bottom: 12px; }
 .page-hero p { margin: 0 auto; }
 
