@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   observer.observe(canvas.parentElement);
 
-  // Auto-apply glitch effect to all h2s and hero h1
-  document.querySelectorAll('h2, .hero h1').forEach(el => {
+  // Auto-apply glitch effect to all h1s
+  document.querySelectorAll('h1').forEach(el => {
     if (el.querySelector('.glitch')) return;
     const text = el.textContent;
     el.innerHTML = `<span class="glitch" data-text="${text}">${text}</span>`;
