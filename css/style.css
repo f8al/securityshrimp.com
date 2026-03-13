@@ -148,7 +148,7 @@ code, .mono { font-family: var(--font-mono); }
 
 /* Glitch effect */
 .glitch {
-  position: relative; display: inline-block;
+  position: relative; display: inline-block; z-index: 0;
 }
 .glitch::before, .glitch::after {
   content: attr(data-text); position: absolute; top: 0; left: 0;
