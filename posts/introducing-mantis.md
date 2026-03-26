@@ -24,7 +24,7 @@ Highlander finds the imposters swimming in your waters. Mantis finds what *you'r
 
 ## Getting Started
 
-Mantis is live at [mantis.securityshrimp.com](https://mantis.securityshrimp.com). Want a walkthrough? [Get in touch](/services.html#contact) and we'll show you what's lurking in your reef.
+Want to see what's lurking in your reef? [Get in touch](/services.html#contact) to request a demo and we'll show you.
 
 ---
 
