@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products — SecurityShrimp</title>
-  <meta name="description" content="SecurityShrimp products: Highlander domain typosquatting detection and brand protection platform.">
+  <meta name="description" content="SecurityShrimp products: Highlander domain typosquatting detection, Mantis attack surface discovery, and open-source security tools.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/cyberpunk_shrimp_logo.svg" type="image/svg+xml">
 </head>
@@ -36,7 +36,7 @@
     <div class="container">
       <span class="badge badge-coral">Products</span>
       <h1>Our Tools</h1>
-      <p>Purpose-built security tools to defend your brand</p>
+      <p>Purpose-built security tools to defend your reef</p>
     </div>
   </section>
 
@@ -69,28 +69,101 @@
     </div>
   </section>
 
-  <!-- How It Works -->
+  <!-- Mantis -->
   <section class="section" style="background: var(--bg-surface);">
     <div class="container">
+      <div class="product-highlight fade-in">
+        <div class="product-highlight-content">
+          <span class="badge badge-accent">New Product</span>
+          <h2>Mantis</h2>
+          <p style="font-size: 1.1rem; color: var(--accent); font-family: var(--font-mono); margin-bottom: 16px;"><em>Attack Surface Discovery &amp; Monitoring</em></p>
+          <p>Mantis continuously discovers, scans, and monitors your organization's external-facing assets. From subdomain enumeration and port scanning to vulnerability detection and risk scoring, Mantis gives you full visibility into your attack surface.</p>
+          <div class="product-features">
+            <div class="product-feature"><span class="check">&#10003;</span> Automated asset discovery &amp; enumeration</div>
+            <div class="product-feature"><span class="check">&#10003;</span> Port scanning &amp; service fingerprinting</div>
+            <div class="product-feature"><span class="check">&#10003;</span> HTTP probing &amp; technology detection</div>
+            <div class="product-feature"><span class="check">&#10003;</span> TLS inspection &amp; certificate monitoring</div>
+            <div class="product-feature"><span class="check">&#10003;</span> Vulnerability scanning &amp; correlation</div>
+            <div class="product-feature"><span class="check">&#10003;</span> CDN/WAF detection &amp; cloud attribution</div>
+            <div class="product-feature"><span class="check">&#10003;</span> A-F risk scoring with prioritized findings</div>
+            <div class="product-feature"><span class="check">&#10003;</span> Continuous monitoring &amp; change detection</div>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="https://mantis.securityshrimp.com" class="btn btn-primary">Visit Mantis</a>
+            <a href="services.html#contact" class="btn btn-ghost">Request a Demo</a>
+          </div>
+        </div>
+        <div class="product-visual">
+          <svg viewBox="0 0 120 120" width="120" height="120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="100" height="100" rx="16" fill="#0a1a1a" stroke="#00E5CC" stroke-width="1.5"/>
+            <circle cx="60" cy="45" r="18" stroke="#00E5CC" stroke-width="1.5" fill="none"/>
+            <circle cx="60" cy="45" r="8" stroke="#00E5CC" stroke-width="1" fill="#00E5CC" fill-opacity="0.15"/>
+            <path d="M60 63 L60 85" stroke="#00E5CC" stroke-width="1.5"/>
+            <path d="M42 45 L20 35" stroke="#00E5CC" stroke-width="1" stroke-dasharray="3 2"/>
+            <path d="M78 45 L100 35" stroke="#00E5CC" stroke-width="1" stroke-dasharray="3 2"/>
+            <path d="M48 56 L30 75" stroke="#00E5CC" stroke-width="1" stroke-dasharray="3 2"/>
+            <path d="M72 56 L90 75" stroke="#00E5CC" stroke-width="1" stroke-dasharray="3 2"/>
+            <circle cx="20" cy="35" r="4" fill="#00E5CC" fill-opacity="0.3" stroke="#00E5CC" stroke-width="1"/>
+            <circle cx="100" cy="35" r="4" fill="#00E5CC" fill-opacity="0.3" stroke="#00E5CC" stroke-width="1"/>
+            <circle cx="30" cy="75" r="4" fill="#00E5CC" fill-opacity="0.3" stroke="#00E5CC" stroke-width="1"/>
+            <circle cx="90" cy="75" r="4" fill="#00E5CC" fill-opacity="0.3" stroke="#00E5CC" stroke-width="1"/>
+            <circle cx="60" cy="85" r="4" fill="#00E5CC" fill-opacity="0.3" stroke="#00E5CC" stroke-width="1"/>
+            <text x="60" y="105" text-anchor="middle" fill="#00E5CC" font-family="monospace" font-size="7">SCAN &#x2022; DISCOVER &#x2022; MONITOR</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Mantis Works -->
+  <section class="section">
+    <div class="container">
       <div class="section-header fade-in">
-        <h2>How Highlander Works</h2>
-        <p>Three steps to discover and analyze typosquatting threats</p>
+        <h2>How Mantis Works</h2>
+        <p>Three steps from murky waters to crystal-clear visibility</p>
       </div>
       <div class="grid grid-3 fade-in">
         <div class="card" style="text-align: center;">
           <div style="font-size: 2rem; color: var(--accent); font-family: var(--font-mono); margin-bottom: 16px;">01</div>
-          <h3>Scan</h3>
-          <p>Enter a target domain. Highlander's proprietary engine discovers thousands of potentially impersonating domains across multiple threat categories.</p>
+          <h3>Cast the Net</h3>
+          <p>Drop in your domains, IPs, or ASNs and Mantis trawls the depths &mdash; discovering subdomains, mapping infrastructure, and surfacing assets you didn't know were exposed.</p>
         </div>
         <div class="card" style="text-align: center;">
           <div style="font-size: 2rem; color: var(--accent); font-family: var(--font-mono); margin-bottom: 16px;">02</div>
-          <h3>Analyze</h3>
-          <p>Each discovered domain is analyzed for active infrastructure, visual impersonation is assessed, and threats are scored and prioritized.</p>
+          <h3>Crack the Shell</h3>
+          <p>Every discovered asset gets probed, fingerprinted, and scanned for vulnerabilities. Mantis peels back the layers &mdash; open ports, exposed services, misconfigurations, the whole reef.</p>
         </div>
         <div class="card" style="text-align: center;">
           <div style="font-size: 2rem; color: var(--accent); font-family: var(--font-mono); margin-bottom: 16px;">03</div>
-          <h3>Act</h3>
-          <p>Review results in the dashboard, identify high-risk impersonators, and take action with takedown requests or defensive registrations.</p>
+          <h3>Stay on the Hook</h3>
+          <p>Continuous monitoring keeps watch over your attack surface like a mantis shrimp stalking its prey. New assets, changes, and emerging threats &mdash; nothing slips past the reef patrol.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Highlander Works -->
+  <section class="section" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>How Highlander Works</h2>
+        <p>Three steps to smoke out the imposters in your waters</p>
+      </div>
+      <div class="grid grid-3 fade-in">
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; color: var(--accent); font-family: var(--font-mono); margin-bottom: 16px;">01</div>
+          <h3>Bait the Trap</h3>
+          <p>Drop in your domain and Highlander's proprietary engine dredges up thousands of potentially impersonating domains &mdash; typosquats, homoglyphs, and lookalikes lurking in the deep.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; color: var(--accent); font-family: var(--font-mono); margin-bottom: 16px;">02</div>
+          <h3>Inspect the Catch</h3>
+          <p>Each suspicious domain gets hauled up and examined &mdash; active infrastructure, visual impersonation scoring, and threat analysis. The bottom feeders have nowhere to hide.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; color: var(--accent); font-family: var(--font-mono); margin-bottom: 16px;">03</div>
+          <h3>Clean the Reef</h3>
+          <p>Review your catch in the dashboard, prioritize the biggest threats, and take action &mdash; takedown requests, defensive registrations, or just keep watching them squirm on the hook.</p>
         </div>
       </div>
     </div>
@@ -199,7 +272,7 @@
     <div class="container" style="text-align: center;">
       <div class="fade-in">
         <h2>Protect Your Brand Today</h2>
-        <p style="margin: 16px auto 32px;">Get started with Highlander or talk to us about a managed brand protection engagement.</p>
+        <p style="margin: 16px auto 32px;">Get started with Highlander or Mantis, or talk to us about a managed security engagement.</p>
         <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
           <a href="services.html#contact" class="btn btn-primary btn-lg">Request a Demo</a>
           <a href="services.html#contact" class="btn btn-secondary btn-lg">Contact Sales</a>
@@ -230,6 +303,7 @@
         <div class="footer-col">
           <h4>Products</h4>
           <a href="products.html">Highlander</a>
+          <a href="https://mantis.securityshrimp.com">Mantis</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>

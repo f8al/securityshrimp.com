@@ -1,5 +1,19 @@
 [
   {
+    "slug": "introducing-mantis",
+    "title": "Introducing Mantis: Attack Surface Discovery for the Rest of Us",
+    "date": "2026-03-25",
+    "excerpt": "Meet Mantis, our new attack surface discovery and monitoring platform. Because you can't protect what you can't see lurking in your reef.",
+    "tags": ["mantis", "asm", "announcement"]
+  },
+  {
+    "slug": "phrenology-1-0-0",
+    "title": "Phrenology Hits 1.0.0 — Reading Heads Like a Pro",
+    "date": "2026-03-25",
+    "excerpt": "Our HTTP security header analysis tool reaches 1.0.0. Four-category analysis, OWASP guidance, bulk scanning, and zero excuses for missing headers.",
+    "tags": ["phrenology", "open-source", "release"]
+  },
+  {
     "slug": "introducing-highlander",
     "title": "Introducing Highlander: Domain Typosquatting Detection",
     "date": "2026-03-13",

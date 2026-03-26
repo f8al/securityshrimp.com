@@ -1,6 +1,6 @@
 // Blog engine — loads posts from posts/index.json, renders markdown with marked.js
 
-const POSTS_INDEX = 'posts/index.json';
+const POSTS_INDEX = 'posts/index.json?v=' + Date.now();
 
 // Load and render blog listing
 async function loadBlogListing() {

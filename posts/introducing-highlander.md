@@ -23,7 +23,7 @@ High-risk domains are flagged and scored, making it easy for brand protection te
 
 ## Getting Started
 
-Highlander is available as a managed service from SecurityShrimp. We handle the infrastructure, monitoring, and alerting so your team can focus on responding to threats.
+Highlander is available as a managed platform from SecurityShrimp. We handle the infrastructure, monitoring, and alerting so your team can focus on responding to threats — not building and maintaining yet another internal tool.
 
 Interested in protecting your brand? [Get in touch](/services.html#contact) to learn more or [request a demo](/products.html).
 
