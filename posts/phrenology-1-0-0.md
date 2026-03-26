@@ -27,7 +27,8 @@ Whether you're running a one-off audit or integrating header checks into your CI
 Phrenology is free and open-source. Grab it from [GitHub](https://github.com/f8al/phrenology) and start reading some headers.
 
 ```bash
-git clone https://github.com/f8al/phrenology && cd phrenology && pip3 install -r requirements.txt
+git clone https://github.com/f8al/phrenology && cd phrenology
+pip3 install -r requirements.txt
 python3 phrenology.py -u https://yourdomain.com -o
 ```
 
