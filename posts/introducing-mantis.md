@@ -16,6 +16,14 @@ Mantis takes your seed inputs — domains, IPs, ASNs, CIDRs — and goes deep:
 - **CDN/WAF & Cloud Attribution** — know what's behind your CDN and which cloud providers host your infrastructure
 - **Risk Scoring** — A-F grading with severity-weighted scoring so you know what to fix first
 
+## Integrations That Fit Your Workflow
+
+Mantis doesn't just find problems — it feeds them directly into your existing security stack:
+
+- **Splunk & Microsoft Sentinel** — native integration pipes findings straight into your SIEM. No middleware, no duct tape.
+- **SOAR Platforms** — webhook support for XSOAR, Phantom, and any platform that speaks HTTP. Automate your response before the tide rolls in.
+- **Email & Slack** — real-time alerts to your inbox or Slack channels so your team knows the moment something surfaces.
+
 ## Why We Built It
 
 We've used the big-name ASM platforms professionally — they're either eye-wateringly expensive, painfully slow, or missing the tools an offensive security practitioner actually wants. Mantis is the attack surface management platform we wished existed: fast, thorough, and built by someone who's been on the other side of the engagement.
