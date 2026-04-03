@@ -66,6 +66,66 @@ async function loadPost() {
     // Update page title
     if (meta) document.title = `${meta.title} — SecurityShrimp Blog`;
 
+    // Inject structured data
+    if (meta) {
+      // Breadcrumbs
+      injectJsonLd({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://securityshrimp.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://securityshrimp.com/blog.html" },
+          { "@type": "ListItem", "position": 3, "name": meta.title, "item": `https://securityshrimp.com/post.html?slug=${slug}` }
+        ]
+      });
+
+      // Article schema
+      injectJsonLd({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": meta.title,
+        "datePublished": meta.date,
+        "dateModified": meta.date,
+        "author": { "@type": "Organization", "name": "SecurityShrimp", "url": "https://securityshrimp.com" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SecurityShrimp",
+          "logo": { "@type": "ImageObject", "url": "https://securityshrimp.com/img/og-image.png" }
+        },
+        "description": meta.excerpt,
+        "image": "https://securityshrimp.com/img/og-image.png",
+        "mainEntityOfPage": `https://securityshrimp.com/post.html?slug=${slug}`
+      });
+
+      // Event schema for KernelCon post
+      if (slug === 'kernelcon-2026') {
+        injectJsonLd({
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": "KernelCon 2026",
+          "description": "SecurityShrimp presenting \"All Keys Lost: A Car Hacking Adventure\" at KernelCon 2026",
+          "startDate": "2026-04-09",
+          "endDate": "2026-04-10",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "KernelCon",
+            "address": { "@type": "PostalAddress", "addressLocality": "Omaha", "addressRegion": "NE", "addressCountry": "US" }
+          },
+          "performer": { "@type": "Organization", "name": "SecurityShrimp" },
+          "organizer": { "@type": "Organization", "name": "KernelCon", "url": "https://kernelcon.org" }
+        });
+      }
+
+      // Update OG meta tags dynamically
+      setMeta('og:title', meta.title + ' — SecurityShrimp Blog');
+      setMeta('og:description', meta.excerpt);
+      setMeta('og:url', `https://securityshrimp.com/post.html?slug=${slug}`);
+      setMeta('twitter:title', meta.title + ' — SecurityShrimp Blog');
+      setMeta('twitter:description', meta.excerpt);
+    }
+
     // Highlight code blocks if hljs is available
     if (window.hljs) {
       container.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
@@ -84,6 +144,18 @@ function escapeHtml(str) {
   const div = document.createElement('div');
   div.textContent = str;
   return div.innerHTML;
+}
+
+function injectJsonLd(data) {
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(data);
+  document.head.appendChild(script);
+}
+
+function setMeta(property, content) {
+  let el = document.querySelector(`meta[property="${property}"], meta[name="${property}"]`);
+  if (el) { el.setAttribute('content', content); }
 }
 
 // Auto-init
