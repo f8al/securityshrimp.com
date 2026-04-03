@@ -14,12 +14,19 @@ Highlander is a domain typosquatting detection and brand protection platform. It
 - **Threat scoring** — prioritizes discovered domains by risk level
 - **Scheduled scans** — set up daily, weekly, or monthly automated monitoring
 - **Real-time progress** — watch scan results stream in as they're discovered
+- **Splunk & Microsoft Sentinel integration** — pipe findings directly into your SIEM, no middleware required
+- **Webhook support** — send alerts to XSOAR, Phantom, or any SOAR platform that speaks HTTP
+- **Email & Slack alerting** — get notified the moment a suspicious domain surfaces
 
 ## How It Works
 
 Enter a target domain and Highlander goes to work, generating and checking domain permutations across multiple threat vectors. Each discovered domain is analyzed for active infrastructure and assessed for visual similarity to your legitimate site.
 
 High-risk domains are flagged and scored, making it easy for brand protection teams to identify and take down threats quickly.
+
+## Fits Right Into Your Security Stack
+
+Highlander doesn't just find imposters — it plugs directly into your existing workflows. Native Splunk and Microsoft Sentinel integration means findings flow straight into your SIEM without duct tape or middleware. Webhook support lets you trigger automated response playbooks in XSOAR, Phantom, or any SOAR platform. And for teams that just want to know the moment something fishy surfaces, Email and Slack alerting have you covered.
 
 ## Getting Started
 

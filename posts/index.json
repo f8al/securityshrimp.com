@@ -1,5 +1,12 @@
 [
   {
+    "slug": "kernelcon-2026",
+    "title": "SecurityShrimp at KernelCon 2026: All Keys Lost",
+    "date": "2026-04-03",
+    "excerpt": "We're speaking at KernelCon in Omaha on April 9th! Join us for \"All Keys Lost: A Car Hacking Adventure\" — a deep dive into automotive security, hardware hacking, and what happens when every key disappears.",
+    "tags": ["conference", "kernelcon", "car-hacking", "speaking"]
+  },
+  {
     "slug": "introducing-mantis",
     "title": "Introducing Mantis: Attack Surface Discovery for the Rest of Us",
     "date": "2026-03-25",
