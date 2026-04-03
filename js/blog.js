@@ -118,6 +118,15 @@ async function loadPost() {
         });
       }
 
+      // Set canonical URL
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.rel = 'canonical';
+        document.head.appendChild(canonical);
+      }
+      canonical.href = `https://securityshrimp.com/post.html?slug=${slug}`;
+
       // Update OG meta tags dynamically
       setMeta('og:title', meta.title + ' — SecurityShrimp Blog');
       setMeta('og:description', meta.excerpt);
