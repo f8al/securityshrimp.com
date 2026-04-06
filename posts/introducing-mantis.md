@@ -24,6 +24,34 @@ Mantis doesn't just find problems — it feeds them directly into your existing 
 - **SOAR Platforms** — webhook support for XSOAR, Phantom, and any platform that speaks HTTP. Automate your response before the tide rolls in.
 - **Email & Slack** — real-time alerts to your inbox or Slack channels so your team knows the moment something surfaces.
 
+## Cloud Asset Discovery — AWS & Azure
+
+Your attack surface doesn't stop at DNS. Mantis now discovers and monitors your cloud infrastructure alongside your external-facing assets. Connect your AWS or Azure accounts and Mantis will automatically enumerate resources, identify misconfigurations, and surface security findings — giving you complete visibility across your entire environment. All credentials are encrypted at rest.
+
+### What it discovers
+
+**AWS:** EC2 instances, RDS databases, Lambda functions, ECS clusters, load balancers (ALB/NLB/Classic), and security group configurations
+
+**Azure:** Virtual Machines, SQL Servers, App Services & Functions, Storage Accounts, AKS clusters, Load Balancers, Network Security Groups, and Public IPs
+
+### Security findings it surfaces
+
+- Open security groups and NSG rules exposing sensitive ports (SSH, RDP, databases) to the internet
+- Unencrypted RDS instances and publicly accessible databases
+- Azure SQL servers with wide-open firewall rules
+- Storage accounts with public blob access enabled
+- App Services and storage accounts not enforcing HTTPS
+- AKS clusters with publicly exposed API servers
+- EC2 instances and Azure VMs with public IP addresses
+
+### How it works
+
+1. Add your AWS IAM credentials or Azure service principal under **Settings > Cloud Integrations**
+2. Validate the connection with one click
+3. Mantis enumerates resources across all configured regions and subscriptions during scans
+4. Cloud resources appear in your asset inventory alongside DNS-discovered assets
+5. Public IPs found in the cloud feed directly into port scanning, HTTP probing, and vulnerability detection
+
 ## Why We Built It
 
 We've used the big-name ASM platforms professionally — they're either eye-wateringly expensive, painfully slow, or missing the tools an offensive security practitioner actually wants. Mantis is the attack surface management platform we wished existed: fast, thorough, and built by someone who's been on the other side of the engagement.
