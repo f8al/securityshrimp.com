@@ -6,6 +6,11 @@
   <title>SecurityShrimp — Cybersecurity Consulting, Attack Surface Discovery & Brand Protection</title>
   <meta name="description" content="SecurityShrimp provides cybersecurity consulting, penetration testing, red teaming, attack surface discovery, and brand protection. Based in Omaha, NE — guarding your digital reef with Highlander and Mantis.">
   <link rel="canonical" href="https://securityshrimp.com/">
+  <!-- Preconnect & Preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="img/logo-512.webp" as="image" type="image/webp">
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="img/cyberpunk_shrimp_logo.svg" type="image/svg+xml">
@@ -88,7 +93,7 @@
   <nav class="nav">
     <div class="container">
       <a href="index.html" class="nav-logo">
-        <img src="img/cyberpunk_shrimp_logo.svg" alt="SecurityShrimp" width="32" height="32">
+        <img src="img/logo-64.png" alt="SecurityShrimp" width="32" height="32">
         <span>Security<span class="logo-accent">Shrimp</span></span>
       </a>
       <div class="nav-links">
@@ -110,7 +115,10 @@
     <canvas id="matrix-canvas" class="hero-canvas"></canvas>
     <div class="hero-scanlines"></div>
     <div class="hero-content">
-      <img src="img/cyberpunk_shrimp_logo.svg" alt="" class="hero-logo" aria-hidden="true">
+      <picture>
+        <source srcset="img/logo-512.webp" type="image/webp">
+        <img src="img/logo-512.png" alt="SecurityShrimp logo" class="hero-logo" fetchpriority="high" width="120" height="120">
+      </picture>
       <h1><span class="glitch" data-text="SecurityShrimp">SecurityShrimp</span></h1>
       <p class="tagline">Small but mighty. Eyes everywhere. Claws ready.</p>
       <div class="hero-actions">
@@ -214,7 +222,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img src="img/cyberpunk_shrimp_logo.svg" alt="SecurityShrimp" width="28" height="28">
+            <img src="img/logo-64.png" alt="SecurityShrimp" width="28" height="28">
             <span>Security<span class="logo-accent">Shrimp</span></span>
           </a>
           <p>Cybersecurity consulting and brand protection.
