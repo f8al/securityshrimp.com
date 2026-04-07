@@ -20,9 +20,10 @@ class MatrixRain {
   }
 
   draw() {
-    this.ctx.fillStyle = 'rgba(8, 8, 8, 0.08)';
+    const style = getComputedStyle(document.documentElement);
+    this.ctx.fillStyle = style.getPropertyValue('--matrix-fade').trim() || 'rgba(8, 8, 8, 0.08)';
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
-    this.ctx.fillStyle = '#00E5CC';
+    this.ctx.fillStyle = style.getPropertyValue('--matrix-color').trim() || '#00E5CC';
     this.ctx.font = `${this.fontSize}px monospace`;
 
     for (let i = 0; i < this.columns.length; i++) {
