@@ -4,6 +4,28 @@
   if (saved) document.documentElement.setAttribute('data-theme', saved);
 })();
 
+// Cloudflare Turnstile — invisible traffic verification
+(function() {
+  const script = document.createElement('script');
+  script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoad';
+  script.async = true;
+  script.defer = true;
+  document.head.appendChild(script);
+
+  window.onTurnstileLoad = function() {
+    const container = document.createElement('div');
+    container.id = 'turnstile-widget';
+    document.body.appendChild(container);
+    turnstile.render('#turnstile-widget', {
+      sitekey: '0x4AAAAAADAF61S2gPlkkVgO',
+      size: 'invisible',
+      callback: function(token) {
+        // Token received — visitor verified
+      }
+    });
+  };
+})();
+
 // Mobile nav toggle
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.nav-toggle');
