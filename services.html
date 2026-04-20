@@ -260,8 +260,19 @@
         <h2>Get in Touch</h2>
         <p>Ready to fortify your reef? Drop us a line and the shrimp will be in touch.</p>
       </div>
-      <div class="fade-in" style="text-align: center;">
-        <p style="margin-bottom: 24px;">Email us at <a href="mailto:info@securityshrimp.com" style="font-family: var(--font-mono);">info@securityshrimp.com</a></p>
+      <form id="contact-form" class="fade-in" style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <input type="text" name="name" placeholder="Name" required class="form-input">
+          <input type="email" name="email" placeholder="Email" required class="form-input">
+        </div>
+        <input type="text" name="subject" placeholder="Subject" class="form-input">
+        <textarea name="message" placeholder="How can we help protect your reef?" rows="5" required class="form-input"></textarea>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADAF61S2gPlkkVgO" data-theme="dark" data-callback="onTurnstileSuccess"></div>
+        <button type="submit" class="btn btn-primary" id="contact-submit" disabled>Send Message</button>
+        <p id="form-status" style="text-align: center; display: none;"></p>
+      </form>
+      <div class="fade-in" style="text-align: center; margin-top: 24px;">
+        <p style="margin-bottom: 24px;">Or reach out directly at <a href="mailto:info@securityshrimp.com" style="font-family: var(--font-mono);">info@securityshrimp.com</a></p>
         <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
           <a href="https://github.com/f8al" class="btn btn-ghost">GitHub</a>
           <a href="https://x.com/securityshrimp" class="btn btn-ghost">Twitter / X</a>
@@ -320,7 +331,44 @@
     </div>
   </footer>
 
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script src="js/effects.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    // Turnstile callback — enable submit once verified
+    function onTurnstileSuccess(token) {
+      document.getElementById('contact-submit').disabled = false;
+    }
+
+    // Adapt Turnstile theme to current site theme
+    (function() {
+      const widget = document.querySelector('.cf-turnstile');
+      if (widget) {
+        const theme = document.documentElement.getAttribute('data-theme');
+        widget.setAttribute('data-theme', theme === 'light' ? 'light' : 'dark');
+      }
+    })();
+
+    // Contact form handler
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const status = document.getElementById('form-status');
+      const token = form.querySelector('[name="cf-turnstile-response"]')?.value;
+
+      if (!token) {
+        status.style.display = 'block';
+        status.style.color = 'var(--danger)';
+        status.textContent = 'Please complete the verification challenge.';
+        return;
+      }
+
+      // For now, show success — hook up to your form backend (Workers, Formspree, etc.)
+      status.style.display = 'block';
+      status.style.color = 'var(--success)';
+      status.textContent = 'Message received! We\'ll be in touch soon. 🦐';
+      form.querySelector('button[type="submit"]').disabled = true;
+    });
+  </script>
 </body>
 </html>
