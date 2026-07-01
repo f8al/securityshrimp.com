@@ -52,6 +52,14 @@ Your attack surface doesn't stop at DNS. Mantis now discovers and monitors your 
 4. Cloud resources appear in your asset inventory alongside DNS-discovered assets
 5. Public IPs found in the cloud feed directly into port scanning, HTTP probing, and vulnerability detection
 
+## Inside & Out — See Both Sides of the Shell
+
+Most attack-surface tools only watch the water from above. Mantis dives deeper. Plug in your **Qualys**, **ServiceNow CMDB**, or **Armis**, and Mantis stitches your external surface to your internal inventory — matching every exposed asset to the real host swimming behind it.
+
+That anonymous IP on the edge? Now it's a named host with a known owner, a criticality rating, and a list of live CVEs. Mantis pulls your Qualys vulnerabilities out onto the assets an attacker can actually reach — so you see the external exposure *and* the internal weakness behind it, in one prioritized view. No more guessing whether a finding sits on a crown-jewel server or a forgotten test box.
+
+Your recon and your risk data, finally on the same reef.
+
 ## Why We Built It
 
 We've used the big-name ASM platforms professionally — they're either eye-wateringly expensive, painfully slow, or missing the tools an offensive security practitioner actually wants. Mantis is the attack surface management platform we wished existed: fast, thorough, and built by someone who's been on the other side of the engagement.
