@@ -13,6 +13,7 @@ Mantis takes your seed inputs — domains, IPs, ASNs, CIDRs — and goes deep:
 - **HTTP Probing & Tech Detection** — probe web assets for status, technologies, and misconfigurations
 - **TLS Inspection** — certificate analysis, expiration monitoring, and cipher suite evaluation
 - **Vulnerability Scanning** — automated vulnerability detection and correlation across discovered assets
+- **Software Composition Analysis** — identify third-party components and libraries running in your stack, with dependency risk scoring so you know which supply-chain weak spots to fix first
 - **CDN/WAF & Cloud Attribution** — know what's behind your CDN and which cloud providers host your infrastructure
 - **Risk Scoring** — A-F grading with severity-weighted scoring so you know what to fix first
 
